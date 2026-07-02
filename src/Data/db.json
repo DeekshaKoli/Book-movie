@@ -1,4 +1,448 @@
 {
-  "bookings": [],
+  "bookings": [
+    {
+      "movie": {
+        "id": 5,
+        "title": "Inception",
+        "rating": "8.9",
+        "img": "/src/assets/m2.jpg"
+      },
+      "user": {
+        "name": "Deeksha",
+        "email": "deekshakoli52@gmail.com",
+        "mobile": "6260843566"
+      },
+      "date": "2026-06-28",
+      "showTime": "01:30 PM",
+      "seats": [
+        "A1",
+        "A2"
+      ],
+      "total": 400,
+      "status": "Confirmed",
+      "bookingId": "BMS511752",
+      "id": "sovOBV_er3o"
+    },
+    {
+      "movie": {
+        "id": 2,
+        "title": "Batman",
+        "rating": "8.2",
+        "img": "/src/assets/m2.jpg"
+      },
+      "user": {
+        "name": "yash koli",
+        "email": "deeksha.koli@choiceindia.com",
+        "mobile": "6260843566"
+      },
+      "date": "2026-06-28",
+      "showTime": "10:00 AM",
+      "seats": [
+        "B2"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS394849",
+      "id": "cVNIFzemBzY"
+    },
+    {
+      "movie": {
+        "id": 10,
+        "title": "Black Panther",
+        "rating": "8.3",
+        "img": "/src/assets/m6.jpg"
+      },
+      "user": {
+        "name": "yash koli",
+        "email": "deeksha.koli@choiceindia.com",
+        "mobile": "6260843566"
+      },
+      "date": "2026-06-27",
+      "showTime": "01:30 PM",
+      "seats": [
+        "A1",
+        "A2"
+      ],
+      "total": 400,
+      "status": "Confirmed",
+      "bookingId": "BMS463592",
+      "id": "LDFUD5M2dzQ"
+    },
+    {
+      "movie": {
+        "id": 1,
+        "title": "Avengers: Endgame",
+        "rating": "8.4",
+        "img": "/src/assets/m1.jpg"
+      },
+      "user": {
+        "name": "Anand Dhakad",
+        "email": "deeksha.koli@choiceindia.com",
+        "mobile": "6260843566"
+      },
+      "date": "2026-06-29",
+      "showTime": "10:00 AM",
+      "seats": [
+        "A1"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS238238",
+      "id": "VDFhe1So7b0"
+    },
+    {
+      "movie": {
+        "id": 2,
+        "title": "Batman",
+        "rating": "8.2",
+        "img": "/src/assets/m2.jpg"
+      },
+      "user": {
+        "name": "Deeksha",
+        "email": "deeksha.koli@choiceindia.com",
+        "mobile": "6260843566"
+      },
+      "date": "2026-06-25",
+      "showTime": "10:00 AM",
+      "seats": [
+        "A1"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS866410",
+      "id": "EXzK5IgvO8Y"
+    },
+    {
+      "movie": {
+        "id": 2,
+        "title": "Batman",
+        "rating": "8.2",
+        "img": "/src/assets/m2.jpg"
+      },
+      "user": {
+        "name": "Deeksha",
+        "email": "deeksha.koli@choiceindia.com",
+        "mobile": "6260843566"
+      },
+      "date": "2026-06-30",
+      "showTime": "10:00 AM",
+      "seats": [
+        "A1"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS262800",
+      "id": "UlpLTzZpkFo"
+    },
+    {
+      "movie": {
+        "id": 2,
+        "title": "Batman",
+        "rating": "8.2",
+        "img": "/src/assets/m2.jpg"
+      },
+      "user": {
+        "name": "Shiv",
+        "email": "shivfarkale31@gamil.com",
+        "mobile": "6260843566"
+      },
+      "date": "2026-07-01",
+      "showTime": "05:00 PM",
+      "seats": [
+        "A1"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS38791",
+      "id": "2FYeNGC-6OE"
+    },
+    {
+      "movie": {
+        "id": 10,
+        "title": "Black Panther",
+        "rating": "8.3",
+        "img": "/src/assets/m6.jpg"
+      },
+      "user": {
+        "name": "kiran",
+        "email": "kiran123@gmail.com",
+        "mobile": "62608435676"
+      },
+      "date": "2026-07-01",
+      "showTime": "05:00 PM",
+      "seats": [
+        "B1"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS506819",
+      "id": "V1c3TrAMliI"
+    },
+    {
+      "movie": {
+        "id": 4,
+        "title": "Interstellar",
+        "rating": "9.0",
+        "img": "/src/assets/m1.jpg"
+      },
+      "user": {
+        "name": "kiran",
+        "email": "kiran123@gmail.com",
+        "mobile": "62608435676"
+      },
+      "date": "2026-07-01",
+      "showTime": "01:30 PM",
+      "seats": [
+        "C3"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS256526",
+      "id": "rEDTFJ8-lvQ"
+    },
+    {
+      "movie": {
+        "id": 6,
+        "title": "Doctor Strange",
+        "rating": "8.0",
+        "img": "/src/assets/m3.jpg"
+      },
+      "user": {
+        "name": "kiran",
+        "email": "kiran123@gmail.com",
+        "mobile": "62608435676"
+      },
+      "date": "2026-07-02",
+      "showTime": "05:00 PM",
+      "seats": [
+        "A1"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS910689",
+      "id": "YIrvhoegCqI"
+    },
+    {
+      "movie": {
+        "id": 6,
+        "title": "Doctor Strange",
+        "rating": "8.0",
+        "img": "/src/assets/m3.jpg"
+      },
+      "user": {
+        "name": "kiran",
+        "email": "kiran123@gmail.com",
+        "mobile": "62608435676"
+      },
+      "date": "2026-07-02",
+      "showTime": "05:00 PM",
+      "seats": [
+        "A1"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS910689",
+      "id": "w41dhpyKUCQ"
+    },
+    {
+      "movie": {
+        "id": 1,
+        "title": "Avengers: Endgame",
+        "rating": "8.4",
+        "img": "/src/assets/m1.jpg"
+      },
+      "user": {
+        "name": "Anand Dhakad",
+        "email": "anand1234@gamil.com",
+        "mobile": "62608435676"
+      },
+      "date": "2026-07-03",
+      "showTime": "10:00 AM",
+      "seats": [
+        "A2"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS789881",
+      "id": "yhlTxJCl9DA"
+    },
+    {
+      "movie": {
+        "id": 6,
+        "title": "Doctor Strange",
+        "rating": "8.0",
+        "img": "/src/assets/m3.jpg"
+      },
+      "user": {
+        "name": "Deeksha",
+        "email": "deeksha@1234gmail.com",
+        "mobile": "62608435676"
+      },
+      "date": "2026-07-02",
+      "showTime": "10:00 AM",
+      "seats": [
+        "A2",
+        "C3"
+      ],
+      "total": 400,
+      "status": "Confirmed",
+      "bookingId": "BMS444611",
+      "id": "_Hbs_OFlSKo"
+    },
+    {
+      "movie": {
+        "id": 6,
+        "title": "Doctor Strange",
+        "rating": "8.0",
+        "img": "/src/assets/m3.jpg"
+      },
+      "user": {
+        "name": "Deeksha",
+        "email": "deeksha@1234gmail.com",
+        "mobile": "62608435676"
+      },
+      "date": "2026-07-03",
+      "showTime": "10:00 AM",
+      "seats": [
+        "B4"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS768921",
+      "id": "3RKu2aP4u6E"
+    },
+    {
+      "movie": {
+        "id": 6,
+        "title": "Doctor Strange",
+        "rating": "8.0",
+        "img": "/src/assets/m3.jpg"
+      },
+      "user": {
+        "name": "Deeksha",
+        "email": "deeksha@1234gmail.com",
+        "mobile": "62608435676"
+      },
+      "date": "2026-07-03",
+      "showTime": "10:00 AM",
+      "seats": [
+        "B4"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS768921",
+      "id": "FvroFmpOBRw"
+    },
+    {
+      "movie": {
+        "id": 1,
+        "title": "Avengers: Endgame",
+        "rating": "8.4",
+        "img": "/src/assets/m1.jpg"
+      },
+      "user": {
+        "name": "Deeksha",
+        "email": "deeksha@1234gmail.com",
+        "mobile": "62608435676"
+      },
+      "date": "2026-07-10",
+      "showTime": "10:00 AM",
+      "seats": [
+        "C3"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS183210",
+      "id": "4QZIiiogSVc"
+    },
+    {
+      "movie": {
+        "id": 3,
+        "title": "Joker",
+        "rating": "8.8",
+        "img": "/src/assets/m8.jpg"
+      },
+      "user": {
+        "name": "yash koli",
+        "email": "deekshakoli52@gmail.com",
+        "mobile": "6260843566"
+      },
+      "date": "2026-07-09",
+      "showTime": "10:00 AM",
+      "seats": [
+        "B1"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS283633",
+      "id": "1y9EA-Js2Bg"
+    },
+    {
+      "movie": {
+        "id": 4,
+        "title": "Interstellar",
+        "rating": "9.0",
+        "img": "/src/assets/m1.jpg"
+      },
+      "user": {
+        "name": "yash koli",
+        "email": "deekshakoli@gmail.com",
+        "mobile": "6260843566"
+      },
+      "date": "2026-07-03",
+      "showTime": "10:00 AM",
+      "seats": [
+        "A1"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS991616",
+      "id": "MBLKLiyS1OI"
+    },
+    {
+      "movie": {
+        "id": 2,
+        "title": "Batman",
+        "rating": "8.2",
+        "img": "/src/assets/m2.jpg"
+      },
+      "user": {
+        "name": "yash koli",
+        "email": "deekshakoli@gmail.com",
+        "mobile": "6260843566"
+      },
+      "date": "2026-07-04",
+      "showTime": "10:00 AM",
+      "seats": [
+        "A1"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS21032",
+      "id": "Tljo7xdgS5k"
+    },
+    {
+      "movie": {
+        "id": 1,
+        "title": "Avengers: Endgame",
+        "rating": "8.4",
+        "img": "/src/assets/m1.jpg"
+      },
+      "user": {
+        "name": "yash koli",
+        "email": "deekshakoli52@gmail.com",
+        "mobile": "6260843566"
+      },
+      "date": "2026-07-04",
+      "showTime": "10:00 AM",
+      "seats": [
+        "A2"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS653319",
+      "id": "JwciPKKNP30"
+    }
+  ],
   "$schema": "./node_modules/json-server/schema.json"
 }

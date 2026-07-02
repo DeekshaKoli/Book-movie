@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import {useNavigate} from 'react-router-dom'
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import { Mail, Lock, Film } from "lucide-react";
+import Animatedbg from "../Components/Animatedbg";
 
 const Login = () => {
+  const navigate = useNavigate();
+
   const [form, setForm] = useState({
     email: "",
     pass: "",
   });
-
-  let navigate= useNavigate()
-
 
   const handleChange = (e) => {
     setForm({
@@ -22,15 +21,15 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    let users = JSON.parse(localStorage.getItem("user")) || [];
+    const users = JSON.parse(localStorage.getItem("user")) || [];
 
-    let alreadyuser = users.find(
-      (e) => e.email === form.email
+    const alreadyuser = users.find(
+      (u) => u.email === form.email
     );
 
     if (!alreadyuser) {
-      
-      navigate("/signup")
+      alert("Account not found!");
+      navigate("/signup");
       return;
     }
 
@@ -39,50 +38,106 @@ const Login = () => {
       return;
     }
 
-    navigate("/home")
+    localStorage.setItem("loggedInUser", form.email);
+    navigate("/home");
   };
 
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg">
-        
-        <h1 className="text-3xl font-bold text-center text-red-500 mb-2">
-          Login
+    <div className="relative min-h-screen overflow-hidden bg-[#09090b] flex items-center justify-center">
+
+      {/* Background Animation */}
+      <Animatedbg />
+
+      {/* Glow */}
+      <div className="absolute w-72 h-72 bg-red-600/30 blur-[120px] rounded-full -top-20 -left-20"></div>
+
+      <div className="absolute w-80 h-80 bg-pink-600/20 blur-[120px] rounded-full bottom-0 right-0"></div>
+
+      {/* Login Card */}
+     <div className="relative z-10 w-[430px] rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-2xl p-8 fade-in">
+
+        <div className="flex justify-center">
+          <div className="bg-gradient-to-r from-red-600 to-red-500 p-4 rounded-full shadow-xl">
+            <Film size={34} className="text-white" />
+          </div>
+        </div>
+
+        <h1 className="text-4xl font-bold text-center text-white mt-5">
+          Welcome Back
         </h1>
 
-        <p className="text-center text-gray-500 mb-6">
-          Welcome Back
+        <p className="text-center text-gray-300 mt-2 mb-8">
+          Login to continue your movie journey 🍿
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-5">
 
-          <input type="email" name="email" placeholder="Enter Email" value={form.email} onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-red-400"
-          />
+                    {/* Email */}
 
-          <input
-            type="password"
-            name="pass"
-            placeholder="Enter Password"
-            value={form.pass}
-            onChange={handleChange}
-            className="w-full p-3 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-red-400"
-          />
+          <div className="relative">
+
+            <Mail
+              size={20}
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+            />
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              value={form.email}
+              onChange={handleChange}
+              required
+              className="w-full pl-12 pr-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-gray-400 outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/40 transition"
+            />
+
+          </div>
+
+          {/* Password */}
+
+          <div className="relative">
+
+            <Lock
+              size={20}
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"
+            />
+
+            <input
+              type="password"
+              name="pass"
+              placeholder="Enter your password"
+              value={form.pass}
+              onChange={handleChange}
+              required
+              className="w-full pl-12 pr-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder:text-gray-400 outline-none focus:border-red-500 focus:ring-2 focus:ring-red-500/40 transition"
+            />
+
+          </div>
+
+          {/* Login Button */}
 
           <button
             type="submit"
-            className="w-full bg-red-500 text-white py-3 rounded-lg font-semibold hover:bg-red-600 transition"
+           className="w-full py-3 rounded-xl bg-gradient-to-r from-red-600 to-red-500 text-white font-bold text-lg glow-red hover:scale-105 transition-all duration-300"
           >
             Login
           </button>
 
-          <p className="text-center text-gray-600">
+          <p className="text-center text-gray-300">
             Don't have an account?{" "}
-            <Link to="/signup"  className="!text-red-500 font-semibold !no-underline hover:!underline">Sign Up</Link>
+            <Link
+              to="/signup"
+              className="text-red-400 font-semibold hover:text-red-300 transition"
+            >
+              Sign Up
+            </Link>
           </p>
 
         </form>
+
       </div>
+
     </div>
   );
 };

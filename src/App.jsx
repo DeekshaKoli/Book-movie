@@ -12,6 +12,8 @@ import Booking from './Pages/Booking'
 import {  Routes, Route } from 'react-router-dom'
 import MainLayout from './Layout/MainLayout'
 import Navbar from './Components/Navbar'
+import Seats from './Pages/Seat'
+import Payment from './Pages/Payment'
 
 
 export const App = () => {
@@ -32,6 +34,8 @@ export const App = () => {
     <Route path="/books" element={<Books />} />
     <Route path="/show" element={<Show />} />
     <Route path="/profile" element={<Profile />} />
+    <Route path="/seats" element={<Seats />} />
+    <Route path="/payment" element={<Payment />} />
   </Route>
 
     </Routes>

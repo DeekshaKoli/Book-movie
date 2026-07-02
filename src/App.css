@@ -183,3 +183,86 @@
   }
 }
 
+/* ===========================
+   Premium Login Animations
+=========================== */
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-30px) translateX(20px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(25px) translateX(-25px);
+  }
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float2 {
+  animation: float2 10s ease-in-out infinite;
+}
+
+/* Smooth Fade */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease;
+}
+
+/* Glow */
+
+.glow-red {
+  box-shadow:
+    0 0 20px rgba(239, 68, 68, .5),
+    0 0 40px rgba(239, 68, 68, .25);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#dc2626;
+  border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+  background:#111827;
+}
+
+/* Selection */
+
+::selection{
+  background:#dc2626;
+  color:white;
+}

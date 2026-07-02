@@ -13,6 +13,7 @@ name: "",
 email: "",
 mobile: "",
 seats: "",
+date: "",
 showTime: "10:00 AM",
 });
 
@@ -33,13 +34,14 @@ const handleSubmit = async (e) => {
     email: formData.email,
     mobile: formData.mobile,
     seats: formData.seats,
+    date: formData.date,
     showTime: formData.showTime,
     bookingDate: new Date().toLocaleDateString(),
   };
 
   try {
     await axios.post(
-      "http://localhost:3000/bookings",
+      "http://localhost:3001/bookings",
       bookingData
     );
 
@@ -161,10 +163,25 @@ return ( <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black 
         </div>
 
         <div>
+  <label className="block text-gray-300 mb-1">
+    Select Date
+  </label>
+
+  <input
+    type="date"
+    name="date"
+    value={formData.date}
+    onChange={handleChange}
+    required
+    className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:border-red-500 outline-none"
+  />
+</div>
+
+        <div>
           <label className="block text-gray-300 mb-1">
             Show Time
           </label>
-
+           
           <select
             name="showTime"
             value={formData.showTime}

@@ -1,6 +1,7 @@
 // Show.jsx
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 import m1 from '../assets/m1.jpg'
 import m2 from '../assets/m2.jpg'
 import m3 from '../assets/m3.jpg'
@@ -11,7 +12,74 @@ import m7 from '../assets/m7.jpg'
 import m8 from '../assets/m8.jpg'
 
 
+
+
 const Show = () => {
+
+const [showForm, setShowForm] = useState(false);
+const [selectedMovie, setSelectedMovie] = useState(null);
+
+const [formData, setFormData] = useState({
+  name: "",
+  email: "",
+  mobile: "",
+});
+
+
+const handleBookTicket = (movie) => {
+  setSelectedMovie(movie);
+  setShowForm(true);
+};
+
+const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value,
+  });
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  // Login wali email
+  
+  const loggedInEmail = localStorage.getItem("loggedInUser");
+
+  // Agar login nahi hai
+  if (!loggedInEmail) {
+    alert("Please login first.");
+    navigate("/login");
+    return;
+  }
+
+  // Email match check
+  if (
+    formData.email.trim().toLowerCase() !==
+    loggedInEmail.trim().toLowerCase()
+  ) {
+    alert("Kindly use your login email ID.");
+    return;
+  }
+
+  console.log({
+    movie: selectedMovie,
+    user: formData,
+  });
+
+  setShowForm(false);
+
+ 
+  navigate("/seats", {
+    state: {
+      movie: selectedMovie,
+      user: formData,
+    },
+  });
+
+
+  
+};
+
   const navigate = useNavigate();
 
   const movie = {
@@ -176,13 +244,7 @@ const Show = () => {
                   </p>
 
                   <button
-                   onClick={() =>
-              navigate("/booking", {
-             state: {
-               movie: item,
-                 },
-                 })
-                   }
+                   onClick={() => handleBookTicket(item)}
                     className="w-full mt-4 bg-red-600 hover:bg-red-700 text-white py-2 rounded-lg font-semibold transition"
                   >
                     🎟 Book Ticket
@@ -191,7 +253,66 @@ const Show = () => {
               </div>
             ))}
 
-              
+              {showForm && (
+  <div className="fixed inset-0 bg-black/70 flex justify-center items-center z-50">
+    <div className="bg-gray-800 p-6 rounded-xl w-[350px] relative">
+
+      <button
+        onClick={() => setShowForm(false)}
+        className="absolute top-2 right-3 text-white text-2xl"
+      >
+        ✖
+      </button>
+
+      <h2 className="text-2xl text-center text-red-500 font-bold mb-4">
+        Book Ticket
+      </h2>
+
+      <p className="text-center text-green-400 mb-4">
+        {selectedMovie?.title}
+      </p>
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Enter Name"
+          onChange={handleChange}
+          className="w-full p-3 rounded bg-gray-700 text-white"
+          required
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter Email"
+          onChange={handleChange}
+          className="w-full p-3 rounded bg-gray-700 text-white"
+          required
+        />
+
+        <input
+          type="tel"
+          name="mobile"
+          placeholder="Enter Mobile"
+          onChange={handleChange}
+          className="w-full p-3 rounded bg-gray-700 text-white"
+          required
+        />
+
+        <button
+          type="submit"
+          className="w-full bg-red-600 hover:bg-red-700 py-3 rounded font-bold"
+        >
+          Continue
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+)}
 
 
           </div>

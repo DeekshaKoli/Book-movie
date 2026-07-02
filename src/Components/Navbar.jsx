@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 // import './Telwind.css'
 
+const loggedInUser = localStorage.getItem("loggedInUser");
+
 const Navbar = () => {
   return (
     <nav className="bg-black text-white shadow-lg">

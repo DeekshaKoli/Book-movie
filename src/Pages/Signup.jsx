@@ -43,16 +43,19 @@ const Signup = () => {
       return
     }
 
-    users.push(form)
-    localStorage.setItem("user", JSON.stringify(users))
+   users.push(form);
+localStorage.setItem("user", JSON.stringify(users));
 
-    navigate("/home")
+// Current user ko login bhi kara do
+localStorage.setItem("loggedInUser", form.email);
+
+navigate("/home");
   }
 
   return (
     <div className="min-h-screen bg-gray-100 flex justify-center items-center px-4">
 
-      <div className="w-full max-w-md bg-white shadow-xl rounded-2xl p-8">
+      <div className="w-full max-w-md bg-black shadow-xl rounded-2xl p-8">
 
         <h1 className="text-3xl font-bold text-center text-red-600 mb-2">
           Book Your Show
