@@ -41,11 +41,11 @@ const Profile = () => {
   return (
     <div className="min-h-screen bg-[#eef2f7] flex justify-center items-center p-8">
 
-      <div className="w-[1100px] h-[1320px] bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.18)] flex overflow-hidden">
+      <div className="w-[1100px] h-[1320px] bg-black rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.18)] flex overflow-hidden">
 
         {/* LEFT PANEL */}
 
-        <div className="w-[300px] bg-gradient-to-b from-[#e11d48] via-[#b91c1c] to-[#111827] text-white p-7 flex flex-col">
+        <div className="w-[300px] bg-gradient-to-b from-[#e11d48] via-[#b91c1c] to-[#3b507e] text-white p-7 flex flex-col">
 
           <div className="flex flex-col items-center">
 

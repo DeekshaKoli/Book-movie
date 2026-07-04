@@ -442,6 +442,50 @@
       "status": "Confirmed",
       "bookingId": "BMS653319",
       "id": "JwciPKKNP30"
+    },
+    {
+      "movie": {
+        "id": 2,
+        "title": "Batman",
+        "rating": "8.2",
+        "img": "/src/assets/m2.jpg"
+      },
+      "user": {
+        "name": "Deeksha",
+        "email": "deekshakoli5@gmail.com",
+        "mobile": "6260843566"
+      },
+      "date": "2026-07-06",
+      "showTime": "01:30 PM",
+      "seats": [
+        "C3"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS740363",
+      "id": "MDBQPUaAD60"
+    },
+    {
+      "movie": {
+        "id": 3,
+        "title": "Joker",
+        "rating": "8.8",
+        "img": "/src/assets/m8.jpg"
+      },
+      "user": {
+        "name": "Deeksha",
+        "email": "deekshakoli2@gmail.com",
+        "mobile": "6260843566"
+      },
+      "date": "2026-07-11",
+      "showTime": "10:00 AM",
+      "seats": [
+        "C1"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS315851",
+      "id": "L1jmvpOuXUw"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
