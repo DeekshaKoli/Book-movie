@@ -54,7 +54,7 @@ const Movies = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gray-100 text-black" >
 
       {/* Header */}
       <div className="bg-red-600 text-white py-6">
@@ -64,7 +64,7 @@ const Movies = () => {
       </div>
 
       {/* Tabs */}
-      <div className="bg-white shadow-md sticky top-0 z-20">
+      <div className="bg-white shadow-md sticky top-0 z-20 text-black ">
         <div className="max-w-7xl mx-auto flex overflow-x-auto">
           {categories.map((item) => (
             <button
@@ -90,7 +90,7 @@ const Movies = () => {
           {data[active].map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden"
+              className="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden text-black"
             >
               <img
                 src={`https://picsum.photos/300/400?random=${index + 1}`}

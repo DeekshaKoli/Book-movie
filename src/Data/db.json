@@ -486,6 +486,28 @@
       "status": "Confirmed",
       "bookingId": "BMS315851",
       "id": "L1jmvpOuXUw"
+    },
+    {
+      "movie": {
+        "id": 2,
+        "title": "Batman",
+        "rating": "8.2",
+        "img": "/src/assets/m2.jpg"
+      },
+      "user": {
+        "name": "Deeksha",
+        "email": "deekshakoli2@gmail.com",
+        "mobile": "6260843566"
+      },
+      "date": "2026-07-07",
+      "showTime": "10:00 AM",
+      "seats": [
+        "A2"
+      ],
+      "total": 200,
+      "status": "Confirmed",
+      "bookingId": "BMS580018",
+      "id": "CrAIKafGcdU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

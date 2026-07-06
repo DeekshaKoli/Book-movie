@@ -49,8 +49,8 @@ const Home = () => {
             <span className="visually-hidden">Next</span>
           </button> */}
         {/* </div> */}
-        <div className="absolute top-80 pl-80 ">
-          <h1 className="text-5xl font-bold mb-4">
+        <div className="absolute top-120 pl-120 text-15xl  ">
+          <h1 className="text-15xl font-bold mb-4">
             Welcome to BookMovie 🎬
           </h1>
           <p className="text-lg">
